@@ -8,12 +8,12 @@ Predict next-day rainfall in Australia using location specific data.
 **data**: 
 10-years dailly weather obersavation from different locations. These observations have been taken from the Bureau of Meteorology's "real time" system. Most of the data are generated and handled 
 
-
-
-<img width="750" alt="data_map" src="https://github.com/hiladar0/rainfall_prediction/blob/main/images/Features%20over%20time%20%26%2030-days%20average.png">
-
-
 <img width="500" alt="data_map" src="https://github.com/hiladar0/rainfall_prediction/blob/main/images/Screen%20Shot%202022-02-08%20at%2014.59.00.png">
+
+
+<img width="1000" alt="data_map" src="https://github.com/hiladar0/rainfall_prediction/blob/main/images/Features%20over%20time%20%26%2030-days%20average.png">
+
+
 
 
 **model:** 
@@ -24,7 +24,7 @@ random forest
 1. Econding Wind direction: I had to consider how to encode/represent angle degree values (0-360 degress) in a continuous and periodic way  (epsilon degrees should be near -epsilon degress). I chose to map the angle to the pair:
 $f: f(\theta) = (\sin(\theta), \cos(\theta))$
 
-<img width="500" alt="data_map" src="https://github.com/hiladar0/rainfall_prediction/blob/main/images/wind%20direction%20%26%20speed.png">
+<img width="800" alt="data_map" src="https://github.com/hiladar0/rainfall_prediction/blob/main/images/wind%20direction%20and%20speed.png">
 
 
 2. Morning and afternoon: The data contains morning and afternoon features, which are inherently correlated. If $x_{AM}$ and $x_{PM}$ are the morning the afternoon fields, I chose to apply the following map:
@@ -37,7 +37,7 @@ $(x_{AM}, x_{PM}) \to (x_{PM}, x_{PM}-x_{AM})$. In that sense, I only used the u
 
 5. Training & Selection - I trained a random forest using randomized grid search. I used oversamppling to overcome imbalance problems. I chose optimal paramers for the model using CV and chose the prediciton threshold that maximizes the f1 score.
 
-<img width="500" alt="data_map" src="https://github.com/hiladar0/rainfall_prediction/blob/main/images/model_performance.png">
+<img width="1000" alt="data_map" src="https://github.com/hiladar0/rainfall_prediction/blob/main/images/model_performance.png">
 
 
 ==== Test ==== 
