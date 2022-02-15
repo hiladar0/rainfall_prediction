@@ -1,6 +1,8 @@
 # rainfall_prediction
 
 ### Problem definition <a class="anchor" id="1.1"></a>
+[click here for easy view](https://nbviewer.org/github/hiladar0/rainfall_prediction/blob/main/notebook.ipynb)
+
 
 **goal**: 
 Predict next-day rainfall in Australia using location specific data. 
