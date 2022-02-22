@@ -3,6 +3,10 @@
 ### Problem definition <a class="anchor" id="1.1"></a>
 [click here for easy view](https://nbviewer.org/github/hiladar0/rainfall_prediction/blob/main/notebook.ipynb)
 
+**Summary**: 
+A classification project, predicting next-day rainfall using seasonal time-series data from different locations. 
+Interesting aspects of the project include encoding wind direction in a continuous and periodic way, handling highly correlated features (morning vs afternoon values of the features), and developing a missing value imputation scheme that utilizes the autocorrelation of the features
+
 
 **goal**: 
 Predict next-day rainfall in Australia using location specific data. 
